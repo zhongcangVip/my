@@ -1,0 +1,2 @@
+<link href="${base}/scripts/plugin/ligerUI/skins/Gray/css/grid.css" rel="stylesheet" type="text/css" />
+<link href="${base}/scripts/plugin/ligerUI/skins/ligerui-icons.css" rel="stylesheet" type="text/css" />

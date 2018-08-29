@@ -1,0 +1,103 @@
+@charset "utf-8";
+/*
+ * artDialog skin
+ * http://code.google.com/p/artdialog/
+ * (c) 2009-2011 TangBin, http://www.planeArt.cn
+ *
+ * This is licensed under the GNU LGPL, version 2.1 or later.
+ * For details, see: http://creativecommons.org/licenses/LGPL/2.1/
+ */
+ 
+/* common start */
+body { _margin:0;  _height: auto!important ; /*IE6 BUG*/ }
+
+.aui_outer { text-align:left; }
+td{border: none;}
+table.aui_border, table.aui_dialog { border:0; margin:0; border-collapse:collapse; width:auto; }
+.aui_nw, .aui_n, .aui_ne, .aui_w, .aui_c, .aui_e, .aui_sw, .aui_s, .aui_se, .aui_header, .aui_tdIcon, .aui_main, .aui_footer { padding:0; }
+.aui_header, .aui_buttons button { font: 12px/1.11 'Microsoft Yahei', Tahoma, Arial, Helvetica, STHeiti; _font-family:Tahoma,Arial,Helvetica,STHeiti; -o-font-family: Tahoma, Arial; }
+.aui_title { overflow:hidden; text-overflow: ellipsis; }
+.aui_state_noTitle .aui_title { display:none; }
+.aui_close { display:block; position:absolute; text-decoration:none; outline:none; _cursor:pointer;overflow: hidden; font-size:0px;background:url(icons/aui_contrl.png) no-repeat top center ; padding:0; top:0; right:5px; width:20px; height:30px; line-height:0px;color:#68767b; text-align:center; font-family: Helvetica, STHeiti; _font-family: Tahoma, '\u9ed1\u4f53', 'Book Antiqua', Palatino;  }
+.aui_close:hover { background-position:center -30px}
+.aui_minimize,.aui_windowResize,.aui_minimize:hover,.aui_windowResize:hover{ display:block; float:right; margin-right:0px; background:url(icons/aui_contrl.png) center -60px no-repeat;  height:30px; width:20px;  position:relative; top:0px; cursor:pointer; overflow:hidden; text-indent:-100px}
+.aui_minimize:hover{ background-position:left -90px; color:#f22b1e}
+.aui_windowResize{ background-position:left -22px }
+.aui_windowResize:hover{ background-position:left -33px; color:#f22b1e }
+
+.aui_main { text-align:center; min-width:9em; min-width:0\9/*IE8 BUG*/; }
+.aui_content { display:inline-block; *zoom:1; *display:inline; text-align:left; border:none 0; }
+.aui_content.aui_state_full { display:block; width:100%; margin:0; padding:0!important; height:100%; }
+.aui_loading { width:96px; height:32px; text-align:left; text-indent:-999em; overflow:hidden; background:url(icons/loading.gif) no-repeat center center; }
+.aui_icon { vertical-align: middle; }
+.aui_icon div { width:48px; height:48px; margin:10px 0 10px 10px; background-position: center center; background-repeat:no-repeat; }
+.aui_buttons { padding:6px 8px; text-align:right; white-space:nowrap;border-bottom-right-radius: 1px;border-bottom-left-radius: 1px; background:url(icons/botton_bj.png) left top #d5d5d5 repeat-x; border-top:solid 1px #DADEE5;}
+.aui_buttons button { margin-left:7px;padding: 0 10px;cursor: pointer; display: inline-block; text-align: center; line-height: 1; *padding:0px 10px; *height:2em; letter-spacing:2px; font-family: Tahoma, Arial/9!important;  overflow:visible; *width:1; color: #333; border: solid 1px #B3B3B3; border-radius: 2px; background:url(icons/button.png);height:22px;}
+.aui_buttons button::-moz-focus-inner{ border:0; padding:0; margin:0; }
+.aui_buttons button:focus { /*outline:none 0; border-color:#426DC9; box-shadow:0 0 8px rgba(66, 109, 201, .9);*/ background:url(icons/button_important.png); color:#333}
+.aui_buttons button:hover { color:#333; border:1px solid #666}
+.aui_buttons button:active {  }
+.aui_buttons button[disabled] { cursor:default; color:#666; background:#DDD; /*border: solid 1px #999;*/ filter:alpha(opacity=50); opacity:.5; box-shadow:none; }
+.aui_buttons button.show{ display:inline-block}
+.aui_buttons button.hide{ display:none}
+button.aui_state_highlight { color: #333;  background:url(icons/button_important.png);border: 1px solid #A96233;}
+button.aui_state_highlight:hover {color:#333;background:url(icons/button_important.png)}
+button.aui_state_highlight:active {url(icons/active.png)}
+
+button.aui_state_loading,button.aui_state_loading:hover,button.aui_state_loading:active{background:url(icons/load_18x18.gif) no-repeat 10px center #ccc; background-size:16% ; padding-left:25px; border-color:#b3b3b3; text-shadow:0px 1px 0px #fff; color:#777; cursor:default}
+
+
+/* common end */
+
+.aui_inner {   border:1px solid #aaa; background:#ededed;border-radius: 3px;  }
+.aui_outer, .aui_inner { border:1px solid 5F5F5F; border:0px solid #333\9; }
+
+.aui_border { box-shadow: inset 0 0 1px rgba(255, 255, 255, .9); }
+.aui_nw, .aui_ne, .aui_sw, .aui_se { width:5px; height:5px; }
+.aui_nw, .aui_n, .aui_ne, .aui_w, .aui_e, .aui_sw, .aui_s, .aui_se { background:rgba(0, 0, 0, .25); background: url(icons/aui_border_bg_long.png);   }
+.aui_nw{ background-position:top left}
+.aui_ne{ background-position:top right}
+.aui_sw{ background-position:bottom left}
+.aui_se{ background-position:bottom right}
+.aui_w, .aui_e, .aui_n, .aui_s,.aui_c{ background:url(icons/aui_border_bg_long.png)}
+
+.aui_state_lock .aui_nw, .aui_state_lock .aui_n, .aui_state_lock .aui_ne, .aui_state_lock .aui_w, .aui_state_lock .aui_e, .aui_state_lock .aui_sw, .aui_state_lock .aui_s, .aui_state_lock .aui_se { opacity:0.5; filter:alpha(opacity=50); }
+.aui_state_focus .aui_dialog { box-shadow: 0 0 3px rgba(0, 0, 0, 0.4); }
+.aui_state_focus .aui_outer { /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); */}
+.aui_state_focus .aui_inner{border:1px solid #878787; }
+.aui_state_lock .aui_border { /*box-shadow:0 3px 26px rgba(0, 0, 0, .9);*/ }
+.aui_state_drag .aui_outer, .aui_outer:active { box-shadow:none; }
+.aui_titleBar { position:relative; height:100%; border-bottom: 1px solid #CCC;}
+.aui_title { height:30px; line-height:30px; padding:0 28px 0 10px; font-weight:bold; color:#000; font-family:Arial ; background:url(icons/tit_bj.png) #dfdfdf top left repeat-x; border-top-left-radius: 3px;  border-top-right-radius: 3px; font-weight:bold; font-size:14px  }
+.aui_title span{  font-weight:bold; font-size:14px ;color: black!important; }
+.aui_state_focus .aui_title { color:#000;}
+/*.aui_state_drag .aui_title { background: linear-gradient(top, #bdc6cd, #edf5f8); background: -moz-linear-gradient(top, #bdc6cd, #edf5f8); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bdc6cd), to(#edf5f8)); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bdc6cd', endColorstr='#edf5f8'); box-shadow:none; }*/
+.aui_state_drag .aui_titleBar { box-shadow:none; }
+.aui_close:active { box-shadow: none; }
+.aui_close.disabled{ display:none} 
+.my-dialog .ui-dialog-titlebar-close{
+ display: none;
+}
+
+.aui_content { color:#666; }
+.aui_state_focus .aui_content { color:#000; }
+.aui_state_noTitle .aui_content {background:#fff url(icons/warning.png) 6px center  no-repeat; padding-left:36px !important; font-weight:bold !important;font-size:14px }
+.aui_state_noTitle .aui_nw, .aui_state_noTitle .aui_ne, .aui_state_noTitle .aui_sw, .aui_state_noTitle .aui_se { width:3px; height:3px; }
+.aui_state_noTitle .aui_inner { border:1px solid #ccc; background:#ededed; }
+.aui_state_noTitle .aui_outer { border:none 0; box-shadow:none; }
+.aui_state_noTitle .aui_nw, .aui_state_noTitle .aui_n, .aui_state_noTitle .aui_ne, .aui_state_noTitle .aui_w, .aui_state_noTitle .aui_e, .aui_state_noTitle .aui_sw, .aui_state_noTitle .aui_s, .aui_state_noTitle .aui_se { background:rgba(0, 0, 0, .05); background:#000\9!important; filter:alpha(opacity=5)!important; }
+.aui_state_noTitle .aui_titleBar { bottom:0; _bottom:0; _margin-top:0; }
+.aui_state_noTitle .aui_close { top:0; right:0; width:18px; height:18px; line-height:18px; text-align:center; text-indent:0; font-size:18px; text-decoration:none; color:#214FA3; background:none; filter:!important; }
+.aui_state_noTitle .aui_close:hover, .aui_state_noTitle .aui_close:active { text-decoration:none; color:#900; }
+.aui_state_noTitle .aui_dialog { box-shadow: none; }
+
+/*最小化*/
+.art_minbox{position:fixed;bottom: 5px;left: 5px; z-index:1100;}
+.art_minbox .itemBox{box-shadow:2px 2px 7px #000;height:20px; padding:5px 20px 5px 7px; background:#777; border-bottom:2px solid #f5b900; border-top-left-radius:5px; border-top-right-radius:5px; color:#fff; margin-right:5px}
+.art_minbox .itemBox .title{line-height: 20px;}
+.art_minbox .aui_windowResize,.art_minbox .aui_windowResize:hover{ 
+display: block;float: right;margin-right: 3px;margin-left: 6px;
+background: url(icons/aui_contrl.png) left -125px no-repeat;font-weight: bold;height: 30px;position: relative;top: 0px; right:8px; cursor: pointer;color: #CCC;}
+.art_minbox .aui_windowResize:hover{ background: url(icons/aui_contrl.png) no-repeat left -156px; color:#F22B1E}
+.art_minbox .aui_windowClose{overflow: hidden;font-size: 0px;background: url(icons/aui_contrl.png) left -5px no-repeat;padding: 0;top: 0px;right: -42px;width: 20px;height: 30px;line-height: 0px;color: #68767B;text-align: center;position: relative; display:inline-block}
+.art_minbox .aui_windowClose:hover{background-position: left -35px; cursor:pointer}
